@@ -1,3 +1,5 @@
+import com.typesafe.sbt.SbtStartScript
+
 organization  := "com.example"
 
 version       := "0.1"
@@ -19,5 +21,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka"   %%  "akka-testkit"  % "2.2.0-RC1" % "test",
   "org.specs2"          %%  "specs2"        % "1.14" % "test"
 )
+
+
+seq(SbtStartScript.startScriptForClassesSettings: _*)
 
 seq(Revolver.settings: _*)
